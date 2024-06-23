@@ -1,24 +1,34 @@
-from types_of_variables import varInt, varBig, varStr, varFloat
-
+# Створено дві змінні, яким надано числові значення
 a = 5
 b = 10
 
-# Оператор and
-expression1 = (a < varInt) and (b <= varBig)  # True
-expression2 = (b >= varInt) and (a > varBig)  # False
+# Складні логічні вирази з використанням оператора and (одне з яких дає True, інше - False)
+expression1 = (a < b) and (b > 0)   # True
+expression2 = (b < a) and (b == 0)  # False
 
-# Оператор or
-expression3 = (varInt < varBig) or (b < 0)  # True
-expression4 = (varBig < len(varStr)) or (a > varFloat)  # False
+# Складні логічні вирази з використанням оператора or (одне з яких дає True, інше - False)
+expression3 = (a < b) or (b < 0)    # True
+expression4 = (b == a) or (a >= b)  # False
 
 # Логічні вирази зі змінними строкового типу
 str1 = "Hello"
-str2 = ""
+str2 = "World!"
+str3 = ""
 
-str_expression1 = str1 and str2  # ""
-str_expression2 = str1 or str2  # "Hello"
+# Логічний оператор and: повертає перше хибне (порожнє) значення, або ж
+# якщо всі значення істинні (непорожні), повертає останнє істинне значення
+str_expression1 = str1 and str2  # останнє істинне (непорожнє), тобто str2
+str_expression2 = str1 and str3  # перше хибне (порожнє) значення, тобто str3
+str_expression3 = str3 and str2  # перше хибне (порожнє) значення, тобто str3
 
-# Запитання у користувача двох чисел
+# Логічний оператор or: повертає перше істинне (непорожнє) значення, або ж
+# якщо всі значення хибні (порожні), повертає останнє хибне значення
+str_expression4 = str1 or str2  # перше істинне (непорожнє) значення, тобто str1
+str_expression5 = str1 or str3  # перше істинне (непорожнє) значення, тобто str1
+str_expression6 = str3 or str2  # перше істинне (непорожнє) значення, тобто str2
+
+# Код, який запитує у користувача два числа і виводить True або False залежно
+# від того, більше перше число другого чи ні
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
 print(num1 > num2)
