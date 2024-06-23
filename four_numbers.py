@@ -1,4 +1,7 @@
-# four_numbers.py
+# Програма, яка запитує у користувача чотири числа -> окремо вираховує суму перших двох та
+# двох інших -> розділяє першу суму на другу -> виводить результат на екран таким чином, що
+# відповідь містить дві цифри після коми.
+
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
 num3 = float(input("Enter the third number: "))
